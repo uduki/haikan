@@ -1,0 +1,4 @@
+-main Example1
+-cp example/src
+-cp ../src
+-js example/bin

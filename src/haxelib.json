@@ -1,0 +1,11 @@
+{
+  "name": "haikan",
+  "url" : "https://github.com/uduki/haikan/",
+  "license": "BSD3",
+  "tags": ["cross", "utility"],
+  "description": "This library is similar conduit of haskell.",
+  "version": "0.0.1",
+  "releasenote": "alpha",
+  "contributors": ["uduki"],
+  "dependencies": {}
+}
