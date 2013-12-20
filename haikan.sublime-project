@@ -11,7 +11,7 @@
     [
         {
             "name": "haikan_example_build",
-            "working_dir": "${project_path:Default}/example",
+            "working_dir": "${project_path:Default}",
             "cmd": ["haxe", "example.hxml"],
             "selector": "source.haxe.2, source.hxml"
         }

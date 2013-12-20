@@ -1,19 +1,24 @@
 package ;
 
 import haikan.Haikan;
-import haikan.List;
+import haxe.ds.Option;
+import js.Browser;
 import js.html.Document;
 
 class Example1
 {
     public static function main()
     {
-        var result = sourceList([for (i in 1..100) i])
-            .isolate(20)
-            .map(function(x){ return x * x})
-            .filter(function(x){ return x % 2 == 0 })
-            .consume()
-            .value();
-        Document.write(result);
+        var result = PipeTools.sourceArray([for (i in 1...100) i])
+            & PipeTools.isolate(20)
+            & PipeTools.map(function(x){ return x * x; })
+            & PipeTools.filter(function(x){ return x % 2 == 0; })
+            ^ PipeTools.consume();
+        switch (result) {
+            case Some(list):
+                Browser.document.write(list.toString());
+            case None:
+                Browser.document.write("進捗ダメです！");
+        }
     }
 }
