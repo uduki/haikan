@@ -1,0 +1,19 @@
+{
+	"folders":
+	[
+		{
+			"path": ".",
+            "file_exclude_patterns": ["*.sublime-project", "*.sublime-workspace", "example/bin/*.js"]
+		}
+	],
+
+    "build_systems":
+    [
+        {
+            "name": "haikan_example_build",
+            "working_dir": "${project_path:Default}/example",
+            "cmd": ["haxe", "example.hxml"],
+            "selector": "source.haxe.2, source.hxml"
+        }
+    ]
+}
